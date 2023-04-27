@@ -2,15 +2,31 @@
 
 <html lang="en">
     <head>
+        <!-- Title and meta tags -->
         <meta charset="utf-8">
         <title>Intro To Engine</title>
+
+        <!-- Import stylesheets -->
         <link type="text/css" rel="stylesheet" href="../style.css">
     </head>
-    
+
     <body>
+        <!-- Canvas element that everything will be rendered on -->
+        <canvas id="renderCanvas"></canvas>
+
+        <!-- Script -->
         <script type="module">
             /* .. Import Engine .. */
-            import GL from '../../WebglEngine.js';
+            import Engine from '../../WebglEngine.js';
+
+            /* .. Canvas that will be used for rendering .. */
+            const canvas = document.querySelector( "#renderCanvas" );
+
+            /* .. Create Scene tied to this canvas .. */
+            const scene = new Engine.Scene( canvas );
+
+            console.log(Engine);
+            console.log(scene);
         </script>
     </body>
 </html>
