@@ -313,17 +313,6 @@ class Vector2 {
     };
 
     /*
-        From Array
-        Sets all values in order from given numbers in array
-        @pram number[]: list of coordinates that will be set
-        @returns void
-    */
-    fromArray( array ) {
-        this.x = array[ 0 ];
-        this.y = array[ 1 ];
-    };
-
-    /*
         To String
         Returns string form of this vector
         @returns String
@@ -463,6 +452,19 @@ Vector2.Lerp = function( start , end , amount ) {
     return new Vector2(
         start.x + (end.x - start.x) * amount,
         start.y + (end.y - start.y) * amount
+    );
+};
+
+/*
+    From Array
+    Returns all values in order from given numbers in array as a vector
+    @pram number[]: list of coordinates that will be set
+    @returns Vector2
+*/
+Vector2.FromArray = function( array ) {
+    return new Vector2(
+        array[ 0 ],
+        array[ 1 ]
     );
 };
 
