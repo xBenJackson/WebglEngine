@@ -90,4 +90,3 @@ class Scene {
 
 /* Export Class */
 export default Scene;
-
