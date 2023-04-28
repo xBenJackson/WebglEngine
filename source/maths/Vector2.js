@@ -308,7 +308,7 @@ class Vector2 {
         Returns (this) vectors values in array form in order
         @returns number[]
     */
-    asArray( value ) {
+    asArray() {
         return [ this.x , this.y ];
     };
 
@@ -459,7 +459,7 @@ Vector2.Lerp = function( start , end , amount ) {
     From Array
     Returns all values in order from given numbers in array as a vector
     @pram number[]: list of coordinates that will be set
-    @returns Vector2
+    @returns new Vector2
 */
 Vector2.FromArray = function( array ) {
     return new Vector2(
