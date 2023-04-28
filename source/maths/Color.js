@@ -252,7 +252,7 @@ Color.Lerp = function( start , end , amount ) {
     From Array
     Returns all values in order from given numbers in array as a color
     @pram number[]: list of colors that will be set
-    @returns Color
+    @returns new Color
 */
 Color.FromArray = function( array ) {
     return new Color(
@@ -266,7 +266,7 @@ Color.FromArray = function( array ) {
     From Hex String
     Returns a color from a given hex string
     @pram String: hex string that will be converted
-    @returns Color
+    @returns new Color
 */
 Color.FromHexString = function( hexString ) {
     // If hex string is not valid, return black color
