@@ -8,6 +8,12 @@
 
         <!-- Import stylesheets -->
         <link type="text/css" rel="stylesheet" href="../style.css">
+
+        <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gl-matrix/2.8.1/gl-matrix-min.js"
+      integrity="sha512-zhHQR0/H5SEBL3Wn6yYSaTTZej12z0hVZKOv3TwCUXT1z5qeqGcXJLLrbERYRScEDDpYIJhPC1fk31gqR783iQ=="
+      crossorigin="anonymous"
+      defer></script>
     </head>
 
     <body>
@@ -25,8 +31,24 @@
             /* .. Create Scene tied to this canvas .. */
             const scene = new Engine.Scene( canvas );
 
+            console.log(new Engine.Matrix());
             console.log(Engine);
             console.log(scene);
+
+            let b = mat4.create();
+            let c = mat4.create();
+            let a = Date.now();
+            let r = mat4.multiply( b , b , c );
+            console.log("Original: " + (Date.now() - a) + "ms");
+
+            let bb = new Engine.Matrix();
+            let cc = new Engine.Matrix();
+            let aa = Date.now();
+            let rr = bb.multiply(cc);
+            console.log("New: " + (Date.now() - aa) + "ms");
+
+            console.log(r);
+            console.log(bb.elements);
         </script>
     </body>
 </html>
